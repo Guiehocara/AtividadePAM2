@@ -1,5 +1,6 @@
 package com.example.trabalhopam.views
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -17,82 +18,27 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.example.trabalhopam.componentes.Botao
+import com.example.trabalhopam.componentes.toolbar
 
 @Composable
-fun Novos(){
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.Red),
-
-    ){
-
-        Spacer(modifier = Modifier.size(20.dp))
-
-        TextButton(
-            onClick = { /*TODO*/ },
-            modifier = Modifier.background(Color.White).fillMaxWidth()
-        ) {
-            Row {
-                Column(
-
-                ) {
-                    Text(text = "Novas casas")
-                }
-                Column(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalAlignment = Alignment.End
-                ) {
-                    Icon(imageVector = Icons.Filled.ArrowForward, contentDescription = "Novas casas", tint = Color.Red)
-                }
-            }
-        }
-
-        Spacer(modifier = Modifier.size(20.dp))
-
-
-
-        TextButton(
-            onClick = { /*TODO*/ },
-            modifier = Modifier.background(Color.White).fillMaxWidth()
-        ) {
-            Row {
-                Column(
-
-                ) {
-                    Text(text = "Novas casas")
-                }
-                Column(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalAlignment = Alignment.End
-                ) {
-                    Icon(imageVector = Icons.Filled.ArrowForward, contentDescription = "Novas casas", tint = Color.Red)
-                }
-            }
-        }
-
-        Spacer(modifier = Modifier.size(20.dp))
-
-        TextButton(
-            onClick = { /*TODO*/ },
+fun Novos() {
+    toolbar {
+        Column(
             modifier = Modifier
-                .background(Color.White)
-                .fillMaxWidth()
-        ) {
-            Row {
-                Column (
-                ) {
-                    Text(text = "Novas casas")
-                }
-                Column(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalAlignment = Alignment.End
-                ) {
-                    Icon(imageVector = Icons.Filled.ArrowForward, contentDescription = "Novas casas", tint = Color.Red)
-                }
-            }
+                .fillMaxSize()
+                .background(Color.Red),
+            ) {
+            Spacer(modifier = Modifier.size(50.dp))
+            Botao(onClick = { Log.i("ola", "ola") }, titulo = "teste")
+            Spacer(modifier = Modifier.size(40.dp))
+            Botao(onClick = { Log.i("ola", "ola") }, titulo = "teste")
+            Spacer(modifier = Modifier.size(40.dp))
+            Botao(onClick = { Log.i("ola", "ola") }, titulo = "teste")
+            Spacer(modifier = Modifier.size(40.dp))
+            Botao(onClick = { Log.i("ola", "ola") }, titulo = "teste")
+
+
         }
-
-
     }
 }
